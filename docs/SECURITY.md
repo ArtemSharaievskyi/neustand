@@ -42,7 +42,10 @@ traffic.
 
 The route is public and has no user accounts or authentication. Hosting-level
 request limits should also be configured to match or tighten the 12 MiB body
-limit.
+limit. The hosting target has not been selected, so the current process-local
+limiter remains a best-effort application guard. After choosing a host, configure
+its edge rate limit and trusted proxy handling before public traffic; no external
+rate-limit service is assumed here.
 
 ## Logging and responses
 
