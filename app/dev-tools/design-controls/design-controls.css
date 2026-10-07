@@ -1,0 +1,14 @@
+@layer theme, components, utilities;
+
+@import 'tailwindcss/theme.css' layer(theme) prefix(tw) source(none);
+@import 'tailwindcss/utilities.css' layer(utilities) prefix(tw) source(none);
+@source './';
+
+@plugin 'daisyui' {
+  themes: light --default;
+  root: '#design-tools-panel';
+  include: button, range;
+  exclude: rootcolor, rootscrollgutter;
+  prefix: 'd-';
+  logs: false;
+}

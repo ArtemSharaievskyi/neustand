@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "project": "NEUSTAND",
+  "updatedAt": "2026-10-07",
+  "maxConcurrentExecutors": 3,
+  "agencyAgents": {
+    "repository": "https://github.com/msitarzewski/agency-agents",
+    "ref": "main",
+    "commit": "83294689da3832c0a9f223221148c411fd3eacc0",
+    "license": "MIT",
+    "codexIntegration": "integrations/codex",
+    "conversionCommand": "scripts/convert.sh --tool codex",
+    "installationCommand": "scripts/install.sh --tool codex --agent <selected-slugs>",
+    "installerPathOverride": "CODEX_AGENTS_DIR",
+    "projectAgentDirectory": ".codex/agents",
+    "preservedSourceDirectory": ".codex/agency-agents/source",
+    "sourceLicensePath": ".codex/agency-agents/source/LICENSE",
+    "converterSha256": {
+      "scripts/convert.sh": "c370a6e9bbea4fbc5b684a614ef9edf540010cf8c9be102a386678b8e8656a8f",
+      "scripts/lib.sh": "51bb6fb36c4727d2764f770649ab18630f5b91e6bd7c9ef96bb5ed2084f30b44"
+    },
+    "supplementalSources": [
+      {
+        "repository": "https://github.com/msitarzewski/agency-agents",
+        "ref": "main",
+        "commit": "86a6695d4cee1c9720e2be4fd8ae007f9b6d96ae",
+        "license": "MIT",
+        "role": "AI-Generated Code Security Auditor",
+        "sourceInstructionsPath": ".codex/agency-agents/source/security/security-ai-generated-code-auditor.md",
+        "reason": "This profile was added after the pinned base commit; the other five requested profiles exist at the base commit."
+      }
+    ]
+  },
+  "skillsCli": {
+    "package": "skills",
+    "version": "1.5.18",
+    "scope": "project",
+    "agent": "codex",
+    "copyFiles": true,
+    "installCommandPattern": "npx skills add <repository> --skill <selected names> --agent codex --copy --yes"
+  },
+  "skills": [
+    {"name":"impeccable","repository":"https://github.com/pbakaus/impeccable","commit":"ece38d9904b8a619b3f77cab476eacad09c4fb11","version":"4.5.0","instructionsPath":".agents/skills/impeccable/SKILL.md"},
+    {"name":"copywriting","repository":"https://github.com/coreyhaines31/marketingskills","commit":"dda3841f0b294e01e93b1541486beefbfab0915e","version":"2.1.0","instructionsPath":".agents/skills/copywriting/SKILL.md"},
+    {"name":"copy-editing","repository":"https://github.com/coreyhaines31/marketingskills","commit":"dda3841f0b294e01e93b1541486beefbfab0915e","version":"2.1.0","instructionsPath":".agents/skills/copy-editing/SKILL.md"},
+    {"name":"cro","repository":"https://github.com/coreyhaines31/marketingskills","commit":"dda3841f0b294e01e93b1541486beefbfab0915e","version":"2.0.0","instructionsPath":".agents/skills/cro/SKILL.md"},
+    {"name":"seo-audit","repository":"https://github.com/coreyhaines31/marketingskills","commit":"dda3841f0b294e01e93b1541486beefbfab0915e","version":"2.0.1","instructionsPath":".agents/skills/seo-audit/SKILL.md"},
+    {"name":"site-architecture","repository":"https://github.com/coreyhaines31/marketingskills","commit":"dda3841f0b294e01e93b1541486beefbfab0915e","version":"2.0.0","instructionsPath":".agents/skills/site-architecture/SKILL.md"},
+    {"name":"schema","repository":"https://github.com/coreyhaines31/marketingskills","commit":"dda3841f0b294e01e93b1541486beefbfab0915e","version":"2.0.0","instructionsPath":".agents/skills/schema/SKILL.md"},
+    {"name":"web-design-guidelines","repository":"https://github.com/vercel-labs/agent-skills","commit":"063bee94c3f4df8453406c830b0a7df0f2860278","version":"1.0.0","instructionsPath":".agents/skills/web-design-guidelines/SKILL.md"},
+    {"name":"vercel-react-best-practices","repository":"https://github.com/vercel-labs/agent-skills","commit":"063bee94c3f4df8453406c830b0a7df0f2860278","version":"1.0.0","instructionsPath":".agents/skills/vercel-react-best-practices/SKILL.md"},
+    {"name":"transitions-dev","repository":"https://github.com/Jakubantalik/transitions.dev","commit":"3bc58021c69725d8bf42108632ac6cf14f2b1d3c","instructionsPath":".agents/skills/transitions-dev/SKILL.md"},
+    {"name":"transitions-polish","repository":"https://github.com/Jakubantalik/transitions.dev","commit":"3bc58021c69725d8bf42108632ac6cf14f2b1d3c","instructionsPath":".agents/skills/transitions-polish/SKILL.md"},
+    {"name":"emil-design-eng","repository":"https://github.com/emilkowalski/skills","commit":"e8a175de22ae1e49370fc144c1f3bb9aeedf988d","instructionsPath":".agents/skills/emil-design-eng/SKILL.md"},
+    {"name":"animate","repository":"https://github.com/emilkowalski/skills","commit":"e8a175de22ae1e49370fc144c1f3bb9aeedf988d","instructionsPath":".agents/skills/animate/SKILL.md"},
+    {"name":"review-animations","repository":"https://github.com/emilkowalski/skills","commit":"e8a175de22ae1e49370fc144c1f3bb9aeedf988d","instructionsPath":".agents/skills/review-animations/SKILL.md"},
+    {"name":"pick-ui-library","repository":"https://github.com/emilkowalski/skills","commit":"e8a175de22ae1e49370fc144c1f3bb9aeedf988d","instructionsPath":".agents/skills/pick-ui-library/SKILL.md"},
+    {"name":"gpt-taste","repository":"https://github.com/Leonxlnx/taste-skill","commit":"ce26fc25c0e5e8cab638f883de62d9a86ee5e45b","instructionsPath":".agents/skills/gpt-taste/SKILL.md"},
+    {"name":"redesign-existing-projects","repository":"https://github.com/Leonxlnx/taste-skill","commit":"ce26fc25c0e5e8cab638f883de62d9a86ee5e45b","instructionsPath":".agents/skills/redesign-existing-projects/SKILL.md"},
+    {"name":"daisyui","repository":"https://github.com/saadeghi/daisyui","commit":"9adbeaa259816be46b98bf497a09cd2ab127e3cf","version":"5.7.x","instructionsPath":".agents/skills/daisyui/SKILL.md"}
+  ],
+  "agentSkillMap": [
+    {
+      "agent":"UI Designer",
+      "profilePath":".codex/agents/ui-designer.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/ui-designer.md",
+      "skillPaths":[".agents/skills/impeccable/SKILL.md",".agents/skills/gpt-taste/SKILL.md",".agents/skills/redesign-existing-projects/SKILL.md"],
+      "referenceSources":[{"name":"Color Hunt","url":"https://colorhunt.co/","purpose":"Palette research only","constraints":["Preserve NEUSTAND orange #ef5b25 as a brand anchor","Check contrast before adoption"]}]
+    },
+    {
+      "agent":"Frontend Developer",
+      "profilePath":".codex/agents/frontend-developer.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/frontend-developer.md",
+      "skillPaths":[".agents/skills/frontend-dev/SKILL.md",".agents/skills/daisyui/SKILL.md",".agents/skills/pick-ui-library/SKILL.md",".agents/skills/web-design-guidelines/SKILL.md",".agents/skills/vercel-react-best-practices/SKILL.md"],
+      "conditionalSkillPaths":{
+        "animationImplementation":[".agents/skills/emil-design-eng/SKILL.md",".agents/skills/animate/SKILL.md",".agents/skills/transitions-dev/SKILL.md"],
+        "animationPolish":[".agents/skills/transitions-polish/SKILL.md"],
+        "animationReview":[".agents/skills/review-animations/SKILL.md"],
+        "explicitShadcnUISelection":[".agents/skills/shadcn/SKILL.md"]
+      },
+      "optionalSkillPolicy":"Use shadcn only when the task explicitly selects shadcn/ui and it fits the approved project stack; it does not set a default for future sites.",
+      "referenceSources":[
+        {"name":"DialKit","url":"https://www.dialkit.dev/agent","scope":"Development-only App Router client example at app/dev-tools/design-controls"},
+        {"name":"Originkit","url":"https://www.originkit.dev/docs/components","cli":"npx originkit add <selected-component>","mcpServer":"originkit"},
+        {"name":"daisyUI Codex MCP","url":"https://daisyui.com/docs/mcp/codex/","mcpServer":"daisyui-gitmcp","paidBlueprint":"not configured"}
+      ]
+    },
+    {
+      "agent":"Backend Architect",
+      "profilePath":".codex/agents/backend-architect.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/backend-architect.md",
+      "skillPaths":[]
+    },
+    {
+      "agent":"UI Finish-Gate Reviewer",
+      "profilePath":".codex/agents/ui-finish-gate-reviewer.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/ui-finish-gate-reviewer.md",
+      "skillPaths":[".agents/skills/impeccable/SKILL.md",".agents/skills/web-design-guidelines/SKILL.md",".agents/skills/review-animations/SKILL.md"],
+      "supportingInstructionPaths":[".agents/skills/impeccable/reference/audit.md"]
+    },
+    {
+      "agent":"Evidence Collector",
+      "profilePath":".codex/agents/evidence-collector.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/evidence-collector.md",
+      "skillPaths":[".agents/skills/web-design-guidelines/SKILL.md",".agents/skills/vercel-react-best-practices/SKILL.md"],
+      "verificationMode":"Read-only evidence collection; cite file:line, commands, exact source/build state and artifacts."
+    },
+    {
+      "agent":"Reality Checker",
+      "profilePath":".codex/agents/reality-checker.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/reality-checker.md",
+      "skillPaths":[".agents/skills/web-design-guidelines/SKILL.md",".agents/skills/vercel-react-best-practices/SKILL.md",".agents/skills/security-audit/SKILL.md"],
+      "verificationMode":"Independent read-only inspection; confirm, refute, or mark each claim uncertain against source and reproduced evidence."
+    },
+    {
+      "agent":"Content Creator",
+      "profilePath":".codex/agents/content-creator.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/content-creator.md",
+      "skillPaths":[".agents/skills/copywriting/SKILL.md",".agents/skills/copy-editing/SKILL.md",".agents/skills/cro/SKILL.md"]
+    },
+    {
+      "agent":"SEO Specialist",
+      "profilePath":".codex/agents/seo-specialist.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/seo-specialist.md",
+      "skillPaths":[".agents/skills/seo-audit/SKILL.md",".agents/skills/site-architecture/SKILL.md",".agents/skills/schema/SKILL.md"]
+    },
+    {
+      "agent":"Test Automation Engineer",
+      "profilePath":".codex/agents/test-automation-engineer.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/testing/testing-test-automation-engineer.md",
+      "sourceCommit":"83294689da3832c0a9f223221148c411fd3eacc0",
+      "sourceSha256":"4299d038e88387546d645ccbe767b1dfdb7de10da55eba1ab103149972cd2b9b",
+      "skillPaths":[".agents/skills/webapp-testing/SKILL.md",".agents/skills/verification-before-completion/SKILL.md"],
+      "responsibility":"Owns browser scenarios and reproducible UI behavior checks using Playwright Test."
+    },
+    {
+      "agent":"Accessibility Auditor",
+      "profilePath":".codex/agents/accessibility-auditor.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/testing/testing-accessibility-auditor.md",
+      "sourceCommit":"83294689da3832c0a9f223221148c411fd3eacc0",
+      "sourceSha256":"362935907af23839775b9c6162f38c0c5a740542ab4350cb5c5b5a0d9f9a4268",
+      "skillPaths":[".agents/skills/webapp-testing/SKILL.md",".agents/skills/web-design-guidelines/SKILL.md",".agents/skills/verification-before-completion/SKILL.md"],
+      "auditTools":["@axe-core/playwright","Lighthouse CI"],
+      "responsibility":"Audits accessibility findings and documents evidence; findings do not authorize visual changes outside the task scope."
+    },
+    {
+      "agent":"AI-Generated Code Security Auditor",
+      "profilePath":".codex/agents/ai-generated-code-security-auditor.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/security/security-ai-generated-code-auditor.md",
+      "sourceCommit":"86a6695d4cee1c9720e2be4fd8ae007f9b6d96ae",
+      "sourceSha256":"ac2196a914bfb00dddfef93edb9eef1860f924f9582d814cd303ab45e4fc71bc",
+      "skillPaths":[".agents/skills/security-audit/SKILL.md",".agents/skills/verification-before-completion/SKILL.md"],
+      "responsibility":"Audits server code, filesystem boundaries, dependency inputs, and secret handling; never reads .env contents or reports secret values."
+    },
+    {
+      "agent":"UX Researcher",
+      "profilePath":".codex/agents/ux-researcher.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/design/design-ux-researcher.md",
+      "sourceCommit":"83294689da3832c0a9f223221148c411fd3eacc0",
+      "sourceSha256":"25f59c4333df2d0f1170ff7a1b11ea8415fd3d0ef80c3e0985209aeb4018680f",
+      "skillPaths":[".agents/skills/impeccable/SKILL.md",".agents/skills/cro/SKILL.md",".agents/skills/ui-ux-pro-max/SKILL.md"],
+      "responsibility":"Supports usability research, user flows, and evidence-based UX recommendations."
+    },
+    {
+      "agent":"Brand Guardian",
+      "profilePath":".codex/agents/brand-guardian.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/design/design-brand-guardian.md",
+      "sourceCommit":"83294689da3832c0a9f223221148c411fd3eacc0",
+      "sourceSha256":"d1d5c78af85d4d35be94b93d5c011d17e3cf5dcb69b2037a3ebf3059803b893e",
+      "skillPaths":[".agents/skills/copy-editing/SKILL.md",".agents/skills/impeccable/SKILL.md"],
+      "responsibility":"Checks brand voice and identity consistency against approved NEUSTAND evidence."
+    },
+    {
+      "agent":"Image Prompt Engineer",
+      "profilePath":".codex/agents/image-prompt-engineer.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/design/design-image-prompt-engineer.md",
+      "sourceCommit":"83294689da3832c0a9f223221148c411fd3eacc0",
+      "sourceSha256":"63a564d01dc5812c494cd8aa034ce1217031d8fe8b3eca1323316879769ff13f",
+      "skillPaths":[],
+      "responsibility":"Writes image briefs and generation prompts; prompt authoring does not generate images. Use the separate imagegen skill/tool when bitmap generation or editing is requested."
+    }
+  ],
+  "developmentTools": {
+    "runtimeBaseline": {"node":"22.14.0","next":"16.3.8","react":"19.3.0","typescript":"5.9.3","tailwindcss":"4.3.3"},
+    "packages": [
+      {"name":"@playwright/test","version":"1.63.0","license":"Apache-2.0","purpose":"Browser test runner"},
+      {"name":"playwright Python","version":"1.63.0","license":"Apache-2.0","purpose":"webapp-testing skill examples and local browser automation"},
+      {"name":"@axe-core/playwright","version":"4.13.0","license":"MPL-2.0","purpose":"Accessibility assertions in browser tests"},
+      {"name":"@lhci/cli","version":"0.15.1","license":"Apache-2.0","purpose":"Lighthouse CI collection and assertions"},
+      {"name":"@playwright/mcp","version":"0.0.30","embeddedPlaywright":"1.54.1","license":"Apache-2.0","purpose":"Isolated npx-launched browser MCP; excluded from package dependencies to avoid its older Playwright core colliding with Playwright Test"},
+      {"name":"next-devtools-mcp","version":"0.4.0","license":"MIT","purpose":"Next.js 16 development server discovery and diagnostics"},
+      {"name":"@upstash/context7-mcp","version":"4.1.2","license":"MIT","purpose":"Documentation lookup MCP; local server does not require an API key"},
+      {"name":"OSV-Scanner","version":"2.6.0","license":"Apache-2.0","sha256":"e0ed7644118b717b028c249ee9d3515024e55e8510747ca08906eb96765354d6","purpose":"Pinned Windows CLI downloaded to the user tool directory and checksum-verified before execution"}
+    ],
+    "securityOverrides": [
+      {"name":"@modelcontextprotocol/sdk","from":"1.25.2","version":"1.31.0","license":"MIT","reason":"OSV fixed versions for two advisories in next-devtools-mcp's exact dependency"},
+      {"name":"basic-ftp","from":"5.3.1","version":"6.2.1","license":"MIT","reason":"OSV fixed version in Lighthouse CI's proxy-agent dependency tree"},
+      {"name":"tmp","from":"0.0.33 and 0.1.0","version":"0.2.7","license":"MIT","reason":"OSV fixed version in Lighthouse CI's dependency tree"},
+      {"name":"uuid","from":"8.3.2","version":"11.1.1","license":"MIT","reason":"OSV fixed version in Lighthouse CI's dependency tree"}
+    ],
+    "knownOSVFindings": [
+      {"name":"extract-zip","version":"2.0.1","severity":"high","source":"transitive dev dependency via @puppeteer/browsers in Lighthouse CI","status":"OSV has no fixed version; remains dev-only"},
+      {"name":"sprintf-js","version":"1.0.3","severity":"medium","source":"transitive dev dependency via @lhci/utils in Lighthouse CI","status":"OSV has no fixed version; remains dev-only"}
+    ],
+    "mcpServers": [
+      {"name":"playwright","transport":"stdio","allowedOrigins":["127.0.0.1:4318","localhost:4318","127.0.0.1:4317","localhost:4317","127.0.0.1:3000","localhost:3000"],"credentials":"none"},
+      {"name":"next-devtools","transport":"stdio","endpoint":"Next.js 16 local development server MCP at /_next/mcp","credentials":"none"},
+      {"name":"context7","transport":"stdio","credentials":"none"}
+    ],
+    "ports": {"playwrightTest":4318,"lighthouseProduction":4317,"conflictCheck":"4317 and 4318 were free before use; no MCP server binds a fixed port."}
+  },
+  "taskContract": {
+    "coordinator":"Ruflo MCP task_create",
+    "executor":"Codex custom-agent delegation",
+    "maxConcurrentExecutors":3,
+    "resolveRelativePathsFrom":"project root",
+    "explicitlyPass":["profilePath","sourceInstructionsPath","skillPaths","conditionalSkillPaths","supportingInstructionPaths","referenceSources"],
+    "neverInferSkillBindingsFromAgentName":true,
+    "preserveProjectInstructions":["AGENTS.md",".agents/skills/frontend-dev/SKILL.md"],
+    "writesRequireSeparateWorktrees":true
+  },
+  "faqFormAudit": [
+    {
+      "order":1,
+      "purpose":"Analyze the current FAQ and contact form",
+      "agent":"UI Finish-Gate Reviewer",
+      "profilePath":".codex/agents/ui-finish-gate-reviewer.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/ui-finish-gate-reviewer.md",
+      "skillPaths":[".agents/skills/frontend-dev/SKILL.md",".agents/skills/web-design-guidelines/SKILL.md",".agents/skills/cro/SKILL.md",".agents/skills/copy-editing/SKILL.md",".agents/skills/vercel-react-best-practices/SKILL.md"],
+      "targetPaths":["app/components/faq1.tsx","app/components/contact-form.tsx","app/components/contact2.tsx","app/components/ui/accordion.tsx","app/api/contact/route.ts","app/lib/contact-constraints.ts","app/globals.css"],
+      "readOnly":true
+    },
+    {
+      "order":2,
+      "purpose":"Independently verify the first review's claims against source",
+      "agent":"Reality Checker",
+      "profilePath":".codex/agents/reality-checker.toml",
+      "sourceInstructionsPath":".codex/agency-agents/source/reality-checker.md",
+      "skillPaths":[".agents/skills/frontend-dev/SKILL.md",".agents/skills/web-design-guidelines/SKILL.md",".agents/skills/vercel-react-best-practices/SKILL.md",".agents/skills/security-audit/SKILL.md"],
+      "targetPaths":["app/components/faq1.tsx","app/components/contact-form.tsx","app/components/contact2.tsx","app/components/ui/accordion.tsx","app/api/contact/route.ts","app/lib/contact-constraints.ts","app/globals.css"],
+      "readOnly":true,
+      "independentSourceInspection":true,
+      "input":"First agent's findings, each as a claim to confirm, refute, or mark uncertain"
+    }
+  ],
+  "designToolIntegrations": {
+    "npmPackages":[
+      {"name":"dialkit","version":"2.0.2","dependencyType":"runtime"},
+      {"name":"motion","version":"14.0.0","dependencyType":"runtime"},
+      {"name":"tailwindcss","version":"4.3.3","dependencyType":"dev"},
+      {"name":"@tailwindcss/postcss","version":"4.3.3","dependencyType":"dev"},
+      {"name":"daisyui","version":"5.7.47","dependencyType":"dev"},
+      {"name":"originkit","version":"0.2.25","dependencyType":"dev","sourceSha":"unavailable: publisher repository URL currently returns repository not found"},
+      {"name":"mcp-remote","version":"0.14.3","dependencyType":"Codex MCP bridge via pinned npx command"}
+    ],
+    "codexMcpServers":[
+      {"name":"daisyui-gitmcp","source":"https://gitmcp.io/saadeghi/daisyui","transport":"mcp-remote stdio bridge","requiresKey":false,"blueprint":"not configured; no existing paid license confirmed"},
+      {"name":"originkit","endpoint":"https://mcp.originkit.dev/mcp","bearerTokenEnv":"ORIGINKIT_API_KEY","requiresKey":true,"keyPresent":false}
+    ],
+    "colorPaletteSource":{"name":"Color Hunt","url":"https://colorhunt.co/","skillOrMcpInstalled":false,"constraints":["Keep #ef5b25 as NEUSTAND orange anchor","Check contrast before using a palette"]},
+    "blockedIntegrations":[
+      {"name":"gstack design-review","source":"https://github.com/garrytan/gstack","version":"1.91.25","commit":"857466ff8b93c0575bc9e46cf2838d1962077d8f","status":"blocked","codexIntegration":"experimental","reason":"Pinned Codex instructions automatically call Claude Code as an outside reviewer and no official per-skill off switch exists; third-party review providers are prohibited. Not installed or registered."}
+    ]
+  }
+}

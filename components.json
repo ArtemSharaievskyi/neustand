@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "app/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "aliases": {
+    "components": "@/components",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "utils": "@/lib/utils"
+  },
+  "registries": {
+    "@tailark-oss": "https://oss.tailark.com/r/radix/{name}.json",
+    "@shadcnblocks": "https://www.shadcnblocks.com/r/radix-nova/{name}"
+  }
+}

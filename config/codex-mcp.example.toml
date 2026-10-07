@@ -1,0 +1,30 @@
+# Project-local Codex MCP template for Windows. The npm packages for
+# Next.js DevTools and Context7 are pinned by package.json/package-lock.json.
+# Keep the working .codex/config.toml machine-local; merge entries as needed.
+# Playwright MCP 0.0.30 requires host:port allowlist entries without a scheme.
+
+[mcp_servers.playwright]
+command = "cmd"
+args = ["/c", "npx", "--yes", "@playwright/mcp@0.0.30", "--headless", "--isolated", "--allowed-origins", "127.0.0.1:4318;localhost:4318;127.0.0.1:4317;localhost:4317;127.0.0.1:3000;localhost:3000", "--caps", "tabs,wait"]
+
+[mcp_servers.next-devtools]
+command = "node"
+args = ["node_modules/next-devtools-mcp/dist/index.js"]
+startup_timeout_ms = 40000
+
+[mcp_servers.context7]
+command = "node"
+args = ["node_modules/@upstash/context7-mcp/dist/index.js"]
+startup_timeout_ms = 40000
+
+[mcp_servers.daisyui-gitmcp]
+command = "cmd"
+args = ["/c", "npx", "-y", "mcp-remote@0.14.3", "https://gitmcp.io/saadeghi/daisyui"]
+
+# Optional external integration. Enable only if separately needed and authorized.
+# [mcp_servers.originkit]
+# url = "https://mcp.originkit.dev/mcp"
+# bearer_token_env_var = "ORIGINKIT_API_KEY"
+
+# Ruflo is already configured at the Codex user level in this environment.
+# Do not add a second project-local server with the same name.
