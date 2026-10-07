@@ -21,10 +21,13 @@ startup_timeout_ms = 40000
 command = "cmd"
 args = ["/c", "npx", "-y", "mcp-remote@0.14.3", "https://gitmcp.io/saadeghi/daisyui"]
 
-# Optional external integration. Enable only if separately needed and authorized.
-# [mcp_servers.originkit]
-# url = "https://mcp.originkit.dev/mcp"
-# bearer_token_env_var = "ORIGINKIT_API_KEY"
+[mcp_servers.shadcn]
+command = "cmd"
+args = ["/c", "npx", "--yes", "shadcn@4.21.4", "mcp"]
+
+[mcp_servers.originkit]
+url = "https://mcp.originkit.dev/mcp"
+bearer_token_env_var = "ORIGINKIT_API_KEY"
 
 # Ruflo is already configured at the Codex user level in this environment.
 # Do not add a second project-local server with the same name.
