@@ -4,6 +4,7 @@ import { Contact2 } from "./components/contact2";
 import { Faq1 } from "./components/faq1";
 import { Feature1 } from "./components/feature1";
 import { Hero1 } from "./components/hero1";
+import { ScrollRevealEnhancer } from "./components/scroll-reveal-enhancer";
 import { SiteNav } from "./components/site-nav";
 
 function Arrow() {
@@ -20,6 +21,7 @@ export default function HomePage() {
 
       <main id="main-content" tabIndex={-1}>
         <Hero1 />
+        <ScrollRevealEnhancer />
         <Feature1 />
 
         <section

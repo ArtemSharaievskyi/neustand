@@ -1,0 +1,134 @@
+{
+  "desktopHero": {
+    "titleOpacity": "1",
+    "titleTransform": "none",
+    "imageLoaded": true,
+    "primaryButtonOpacity": "1",
+    "revealsEnabled": true
+  },
+  "desktopInitialServices": [
+    {
+      "title": "Demontage & Entkernung",
+      "opacity": "0",
+      "revealed": false
+    },
+    {
+      "title": "Entrümpelung & Räumung",
+      "opacity": "0",
+      "revealed": false
+    },
+    {
+      "title": "Wohnungsaufbereitung",
+      "opacity": "0",
+      "revealed": false
+    },
+    {
+      "title": "Trockenbau",
+      "opacity": "0",
+      "revealed": false
+    },
+    {
+      "title": "Bodenlegearbeiten",
+      "opacity": "0",
+      "revealed": false
+    },
+    {
+      "title": "Baufertigteile & Montage",
+      "opacity": "0",
+      "revealed": false
+    },
+    {
+      "title": "Bau- & Endreinigung",
+      "opacity": "0",
+      "revealed": false
+    }
+  ],
+  "desktopAfterDown": {
+    "total": 24,
+    "revealed": 24,
+    "cards": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "workflowSteps": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "desktopAfterBack": 24,
+  "faqExpanded": "true",
+  "contactFocus": {
+    "focused": true,
+    "sectionOpacity": "1",
+    "revealed": true
+  },
+  "video": "D:\\Visual Code\\save\\neustand-site\\artifacts\\animation-qa\\page@53bd11df336e63636ebf4b091a65d9dd.webm",
+  "mobileCards": [
+    {
+      "title": "Demontage & Entkernung",
+      "revealed": true,
+      "opacity": "1"
+    },
+    {
+      "title": "Entrümpelung & Räumung",
+      "revealed": true,
+      "opacity": "1"
+    },
+    {
+      "title": "Wohnungsaufbereitung",
+      "revealed": true,
+      "opacity": "1"
+    },
+    {
+      "title": "Trockenbau",
+      "revealed": true,
+      "opacity": "1"
+    },
+    {
+      "title": "Bodenlegearbeiten",
+      "revealed": true,
+      "opacity": "1"
+    },
+    {
+      "title": "Baufertigteile & Montage",
+      "revealed": true,
+      "opacity": "1"
+    },
+    {
+      "title": "Bau- & Endreinigung",
+      "revealed": true,
+      "opacity": "1"
+    }
+  ],
+  "mobileLayout": {
+    "width": 390,
+    "scrollWidth": 390,
+    "contactOverflow": false
+  },
+  "reducedMotion": {
+    "rootMarker": null,
+    "cardOpacities": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "pageErrors": []
+  },
+  "noJavaScript": {
+    "rootMarker": null,
+    "cards": 7,
+    "firstCardOpacity": "1"
+  },
+  "pageErrors": []
+}

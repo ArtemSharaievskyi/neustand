@@ -1,80 +1,130 @@
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 const services = [
   {
     slug: "demontage-entkernung",
     title: "Demontage & Entkernung",
+    image: "/images/services/demontage-entkernung-v2.webp",
+    imageAlt:
+      "Teilweise entputzte Wand mit freigelegten Ziegeln und geordnet gestapelten Rückbaumaterialien.",
+    imagePosition: "50% 55%",
+    imageSizes:
+      "(max-width: 680px) calc(100vw - 32px), (max-width: 900px) calc(100vw - 48px), (max-width: 1280px) 58vw, 686px",
     intro:
       "Rückbau bestehender Einbauten und Oberflächen als Vorbereitung für die nächsten Arbeiten.",
     items: [
-      "Nichttragende Trennwände, Gipskartonkonstruktionen und abgehängte Decken demontieren",
-      "Türen und Zargen sowie alte Küchen und Einbaumöbel ausbauen",
-      "Tapeten, Putz, Fliesen, alten Estrich und Bodenbeläge entfernen",
+      "Nichttragende Trennwände, Trockenbaukonstruktionen und abgehängte Decken demontieren",
+      "Türen, Zargen, alte Küchen und Einbaumöbel ausbauen",
+      "Tapeten, Putz, Fliesen, vorhandenen Estrich und alte Bodenbeläge entfernen",
     ],
-    note: "Ohne Eingriffe in tragende oder statisch relevante Bauteile.",
+    note: "Ohne Eingriff in tragende oder statisch relevante Bauteile.",
     layout: "service-span-7",
   },
   {
     slug: "entruempelung-raeumung",
     title: "Entrümpelung & Räumung",
+    image: "/images/services/entruempelung-raeumung.webp",
+    imageAlt:
+      "Kartons und Möbel stehen am Rand eines bereits weitgehend freigeräumten Zimmers.",
+    imagePosition: "50% 50%",
+    imageSizes:
+      "(max-width: 680px) calc(100vw - 32px), (max-width: 900px) calc(100vw - 48px), (max-width: 1280px) 42vw, 486px",
     intro:
       "Platz schaffen in Wohnungen, Häusern, Kellern, Garagen, Büros und auf Baustellen.",
     items: [
-      "Möbel, zurückgelassene Gegenstände und Abfälle aus den Räumen räumen",
-      "Materialien sortieren, hinaustragen und in bereitgestellte Container einbringen",
+      "Möbel, zurückgelassene Gegenstände und sonstiges Räumgut entfernen",
+      "Materialien sortieren, hinaustragen und in bereitgestellten Behältern oder Containern bereitstellen",
+      "Wohnungs-, Haushalts-, Betriebs- und Baustellenräumungen",
     ],
     layout: "service-span-5",
   },
   {
     slug: "wohnungsaufbereitung",
     title: "Wohnungsaufbereitung",
+    image: "/images/services/wohnungsaufbereitung-v2.webp",
+    imageAlt:
+      "An einer Zimmerwand ist links alte Tapete entfernt; rechts ist helle Raufasertapete angebracht.",
+    imagePosition: "50% 50%",
+    imageSizes:
+      "(max-width: 680px) calc(100vw - 32px), (max-width: 900px) calc(100vw - 48px), (max-width: 1280px) calc(100vw - 48px), 1180px",
     intro:
-      "Wohnungen für Übergabe, Mieterwechsel oder Renovierung vorbereiten. Welche Arbeiten dazugehören, richtet sich nach Zustand und vereinbartem Umfang.",
+      "Wohnungen für Übergabe, Mieterwechsel oder nachfolgende Renovierungsarbeiten vorbereiten. Der konkrete Umfang richtet sich nach Zustand und vereinbarter Leistung.",
     items: [
-      "Alte Beläge entfernen, Löcher und Risse schließen, Tapeten und Türen ausbessern sowie Wandflächen auffrischen",
-      "Tapezier- und Anstricharbeiten, einschließlich Raufasertapeten mit weißem Anstrich",
-      "Reinigung und Vorbereitung zur Übergabe nach dem konkreten Bedarf",
+      "Alte Tapeten, Bodenbeläge und zurückgelassene Einbauten entfernen",
+      "Bohrlöcher und Risse schließen sowie Tapeten, Türen und Oberflächen ausbessern",
+      "Raufaserarbeiten mit weißem Überstreichen im Rahmen der Wohnungsaufbereitung",
+      "Reinigung und Vorbereitung für Übergabe oder nachfolgende Gewerke",
     ],
     layout: "service-span-full",
   },
   {
     slug: "trockenbau",
     title: "Trockenbau",
+    image: "/images/services/trockenbau.webp",
+    imageAlt:
+      "Nicht tragende Trockenbauwand mit teilweise sichtbarem Metallständerrahmen und Gipskartonplatten.",
+    imagePosition: "50% 52%",
+    imageSizes:
+      "(max-width: 680px) calc(100vw - 32px), (max-width: 900px) calc(100vw - 48px), (max-width: 1280px) 50vw, 583px",
     intro:
-      "Räume mit nichttragenden Konstruktionen gestalten und an neue Anforderungen anpassen.",
+      "Räume mit nichttragenden Trockenbaukonstruktionen gestalten und an neue Anforderungen anpassen.",
     items: [
-      "Gipskarton-Trennwände, Vorsatzschalen, abgehängte Decken und vergleichbare Trockenbaukonstruktionen montieren und demontieren",
+      "Nichttragende Gipskarton-Trennwände montieren und demontieren",
+      "Vorsatzschalen, Deckenbekleidungen und Unterdecken herstellen",
+      "Dämmstoffe innerhalb von Trockenbaukonstruktionen einbringen",
     ],
     layout: "service-span-6",
   },
   {
     slug: "bodenlegearbeiten",
     title: "Bodenlegearbeiten",
-    intro: "Neue Bodenbeläge für die weitere Nutzung Ihrer Räume.",
+    image: "/images/services/bodenlegearbeiten-v2.webp",
+    imageAlt:
+      "Helle Bodenplanken werden verlegt; neben der noch offenen Kante liegen lose Planken auf dem Untergrund.",
+    imagePosition: "50% 60%",
+    imageSizes:
+      "(max-width: 680px) calc(100vw - 32px), (max-width: 900px) calc(100vw - 48px), (max-width: 1280px) 50vw, 583px",
+    intro: "Neue Bodenbeläge für Wohn- und Nutzräume.",
     items: [
-      "Laminat, Vinyl- und PVC-Beläge, Linoleum, Teppichboden und Fertigparkett verlegen",
-      "Passende Sockel- und Abschlussleisten montieren",
+      "Laminat, Vinyl-/PVC-Beläge, Linoleum, Teppichboden und Fertigparkett verlegen",
+      "Sockel-, Übergangs- und Abschlussleisten montieren",
     ],
     layout: "service-span-6",
   },
   {
     slug: "montage",
-    title: "Montage",
-    intro: "Vorgefertigte Elemente und Einrichtungen passend montieren.",
+    title: "Baufertigteile & Montage",
+    image: "/images/services/montage-v2.webp",
+    imageAlt:
+      "Weiße Innentür in neuer Zarge; die seitliche Verkleidung fehlt noch und vorbereitete Zierleisten stehen daneben.",
+    imagePosition: "50% 55%",
+    imageSizes:
+      "(max-width: 680px) calc(100vw - 32px), (max-width: 900px) calc(100vw - 48px), (max-width: 1280px) 42vw, 486px",
+    intro: "Vorgefertigte Bauteile, Möbel und Einrichtungen fachgerecht montieren.",
     items: [
-      "Vorgefertigte Innentüren und Zargen einbauen sowie Regale, Fertigmöbel und Küchenschränke montieren",
+      "Vorgefertigte Innentüren und Zargen einbauen",
+      "Regalsysteme, Fertigmöbel und Küchenschränke montieren",
+      "Bestehende Möbel und Einbauten demontieren",
     ],
     note:
-      "Ohne Anschlussarbeiten an Elektro-, Gas-, Heizungs- oder Wasserinstallationen.",
+      "Ohne Elektro-, Gas-, Heizungs- oder Wasseranschlussarbeiten.",
     layout: "service-span-5",
   },
   {
     slug: "baureinigung",
-    title: "Baureinigung",
-    intro: "Saubere Räume nach Rückbau, Ausbau und weiteren Arbeiten.",
+    title: "Bau- & Endreinigung",
+    image: "/images/services/baureinigung-v2.webp",
+    imageAlt:
+      "Sauberes Zimmer vor der Übergabe mit Eimer, Bodenwischer, Tüchern und Handbürste am Fenster.",
+    imagePosition: "50% 85%",
+    imageSizes:
+      "(max-width: 680px) calc(100vw - 32px), (max-width: 900px) calc(100vw - 48px), (max-width: 1280px) 58vw, 686px",
+    intro: "Saubere Räume nach Rückbau, Ausbau oder vor der Übergabe.",
     items: [
-      "Grund- und Endreinigung sowie Reinigung nach Demontage- und Ausbauarbeiten",
-      "Der Umfang richtet sich nach dem Zustand des Objekts und der Vereinbarung",
+      "Grund-, Bau- und Endreinigung",
+      "Reinigung nach Demontage- und Ausbauarbeiten",
+      "Übergabereinigung nach vereinbartem Leistungsumfang",
     ],
     layout: "service-span-7",
   },
@@ -101,8 +151,8 @@ export function Feature1() {
             Leistungen mit <em>klarem Rahmen.</em>
           </h2>
           <p>
-            Sieben Arbeitsbereiche für Rückbau, Vorbereitung und Innenausbau.
-            Der Umfang richtet sich nach Zustand und Vorhaben.
+            Sieben Leistungsbereiche für Rückbau, Vorbereitung und ausgewählten Innenausbau.
+            Welche Arbeiten erforderlich sind, richtet sich nach Zustand des Objekts und dem vereinbarten Leistungsumfang.
           </p>
         </div>
 
@@ -112,6 +162,16 @@ export function Feature1() {
               className={`service-card-modern card card-border ${service.layout}`}
               key={service.slug}
             >
+              <figure className="service-media-modern">
+                <Image
+                  src={service.image}
+                  alt={service.imageAlt}
+                  width={1440}
+                  height={960}
+                  sizes={service.imageSizes}
+                  style={{ objectPosition: service.imagePosition }}
+                />
+              </figure>
               <div className="service-copy-modern card-body">
                 <div className="service-copy-heading">
                   <h3>{service.title}</h3>
@@ -147,6 +207,11 @@ export function Feature1() {
             Arbeitsschritte – passend zu Ihrem Objekt und Ihrem Vorhaben.
           </p>
         </div>
+        <p className="service-scope-note">
+          Alle Leistungen werden im jeweils zulässigen handwerksrechtlichen Rahmen ausgeführt. Arbeiten an tragenden
+          oder statisch relevanten Bauteilen sowie Elektro-, Gas-, Heizungs- und Sanitärinstallationen sind nicht
+          Bestandteil unseres Leistungsangebots.
+        </p>
       </div>
     </section>
   );

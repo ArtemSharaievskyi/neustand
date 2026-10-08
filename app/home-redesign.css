@@ -148,6 +148,21 @@
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 14px;
 }
+.service-media-modern {
+  position: relative;
+  height: clamp(168px, 15vw, 204px);
+  margin: 0;
+  overflow: hidden;
+  background: #171b1b;
+}
+.service-media-modern img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .45s var(--ease);
+}
+.service-card-modern:hover .service-media-modern img { transform: scale(1.02); }
 .service-card-modern.card {
   display: block;
   min-width: 0;
@@ -164,7 +179,7 @@
 .service-span-6 .service-copy-heading h3 { font-size: clamp(22px, 1.9vw, 26px); }
 .service-copy-modern.card-body {
   display: grid;
-  height: 100%;
+  height: auto;
   grid-template-columns: minmax(190px, .9fr) minmax(0, 1.1fr);
   align-items: start;
   gap: clamp(20px, 3vw, 34px);
@@ -189,7 +204,7 @@
 .service-copy-details {
   display: flex;
   min-width: 0;
-  height: 100%;
+  height: auto;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -279,6 +294,15 @@
 .service-process > p {
   max-width: 45ch;
   margin: 0;
+  color: #d0d3ce;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.service-scope-note {
+  max-width: 92ch;
+  margin: 26px 0 0;
+  padding-top: 17px;
+  border-top: 1px solid rgba(255,255,255,.16);
   color: #d0d3ce;
   font-size: 14px;
   line-height: 1.6;
@@ -524,6 +548,7 @@
   .service-grid-modern { grid-template-columns: minmax(0, 1fr); gap: 12px; }
   .service-card-modern.card { grid-column: 1 / -1; }
   .service-copy-modern.card-body { grid-template-columns: minmax(190px, .8fr) minmax(0, 1.2fr); }
+  .service-media-modern { height: 176px; }
   .service-process { grid-template-columns: 1fr; gap: 22px; }
   .service-process > p { max-width: 66ch; }
   .audience-band-grid, .workflow-grid, .owner-contact-grid { grid-template-columns: minmax(0, 1fr); gap: 46px; }
@@ -554,6 +579,7 @@
   .audience-band-copy h2 { font-size: clamp(40px, 10vw, 48px); }
   .service-copy-modern.card-body { grid-template-columns: 1fr; gap: 18px; padding: 22px 20px 20px; }
   .service-span-6 .service-copy-modern.card-body { grid-template-columns: 1fr; }
+  .service-media-modern { height: 128px; }
   .service-copy-heading { padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,.14); }
   .service-copy-heading h3 { margin-bottom: 10px; font-size: 27px; }
   .service-intro-modern { font-size: 14px; }
@@ -571,4 +597,26 @@
   .footer-modern-main nav { align-items: flex-start; }
   .footer-modern-bottom { align-items: flex-start; flex-direction: column; gap: 4px; }
   .file-picker-button { width: 100%; min-width: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-media-modern img { transition: none; }
+  .service-card-modern:hover .service-media-modern img { transform: none; }
+}
+
+html[data-scroll-reveals="ready"] [data-scroll-reveal]:not([data-scroll-revealed="true"]) {
+  opacity: 0;
+  transform: translateY(var(--scroll-reveal-distance, 16px));
+}
+
+html[data-scroll-reveals="ready"] [data-scroll-reveal]:focus-within {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-scroll-reveals="ready"] [data-scroll-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
