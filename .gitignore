@@ -76,6 +76,7 @@ secrets.json
 # Machine-local Codex overrides only; keep project agents and source originals
 .codex/config.toml
 .codex/AGENTS.override.md
+.codex/agents/
 
 # Local agent runtime state (keep reproducible .claude-flow/config.yaml)
 .claude/
@@ -94,6 +95,7 @@ secrets.json
 .claude-flow/tasks/
 .ruflo/browser-sessions/
 .ruvector/intelligence.json
+.site-state/
 
 # Generated swarm databases and indexes (keep .swarm/schema.sql)
 .swarm/backups/

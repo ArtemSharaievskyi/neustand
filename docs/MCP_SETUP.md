@@ -18,8 +18,7 @@ replacing it. The template uses repo-relative Node package paths and assumes
 Codex starts commands from the project root. On macOS or Linux, use `npx` as
 the Playwright, GitMCP, and shadcn command instead of the Windows `cmd /c` wrapper.
 Restart Codex after editing the local MCP configuration, then inspect the
-server list with `codex mcp list`. Codex does not load `.env.local` as its own
-environment: provide `ORIGINKIT_API_KEY` to the Codex process before starting it.
+server list with `codex mcp list`. This list shows registration, not health.
 
 ## Servers and versions
 
@@ -30,13 +29,13 @@ environment: provide `ORIGINKIT_API_KEY` to the Codex process before starting it
 | Context7 | `@upstash/context7-mcp@4.1.2` from the npm lockfile | Local stdio process; a documentation lookup uses the network but does not require a project key |
 | DaisyUI GitMCP | `mcp-remote@0.14.3` | Remote documentation endpoint; the client package is pinned, while upstream documentation changes over time |
 | shadcn MCP | `shadcn@4.21.4` via pinned npx command | Browse the public registry; optional, independent of the installed shadcn skill |
-| OriginKit | Optional remote integration | The template points to the endpoint; it becomes usable after `ORIGINKIT_API_KEY` is available to Codex. Keep the value outside Git and TOML. |
-| Ruflo | Codex user-level configuration | Keep the existing user-level server; do not duplicate it in this template |
+| Ruflo | Optional sibling `ruflo` repository | Open via `..\ruflo\scripts\open-site.ps1 -Slug neustand`; its launcher selects this site's private memory store |
 
-The separate `.agents/config.toml` is an agent-harness configuration, not a
-second copy of Codex's local MCP file. Its Ruflo command is pinned to `3.54.1`;
-the active Ruflo server may still come from user-level settings. No paid component
-or service is required by the website.
+The website needs no MCP server to install, build, test, or run. The sibling
+developer workspace pins Ruflo 3.54.1 and connects shared profiles and skills.
+The launcher passes both `CLAUDE_FLOW_DB_PATH` and `CLAUDE_FLOW_MEMORY_PATH`;
+Ruflo MCP search in this version uses the latter. Keep each site's memory in
+its own local directory and start a fresh Codex session for each site.
 
 ## Allowlist and safe smoke checks
 

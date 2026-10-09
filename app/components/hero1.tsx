@@ -3,7 +3,7 @@ import { getImageProps } from "next/image";
 import { Button } from "./ui/button";
 
 const heroImageOptions = {
-  alt: "",
+  alt: "Symbolbild eines teils entkernten Wohnraums mit freigelegtem Mauerwerk und Sanierungsarbeiten.",
   sizes: "100vw",
   quality: 82,
   loading: "eager" as const,
@@ -11,37 +11,21 @@ const heroImageOptions = {
 };
 
 const {
-  props: { srcSet: desktopSrcSet, ...desktopImageProps },
+  props: heroImageProps,
 } = getImageProps({
   ...heroImageOptions,
-  src: "/images/neustand-hero-transformation-wide.png",
-  width: 1916,
-  height: 821,
-});
-
-const {
-  props: { srcSet: mobileSrcSet, sizes: mobileSizes },
-} = getImageProps({
-  ...heroImageOptions,
-  src: "/images/neustand-hero-transformation-mobile.png",
-  width: 1122,
-  height: 1402,
+  src: "/images/hero.webp",
+  width: 2912,
+  height: 1632,
 });
 
 export function Hero1() {
   return (
     <section className="home-hero hero" id="top" aria-labelledby="hero-title">
-      <picture className="home-hero-picture" aria-hidden="true">
-        <source
-          media="(max-width: 680px)"
-          srcSet={mobileSrcSet}
-          sizes={mobileSizes}
-        />
+      <picture className="home-hero-picture">
         <img
-          {...desktopImageProps}
-          srcSet={desktopSrcSet}
+          {...heroImageProps}
           className="home-hero-image"
-          alt=""
         />
       </picture>
       <div className="home-hero-overlay" aria-hidden="true" />

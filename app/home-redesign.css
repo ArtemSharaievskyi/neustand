@@ -25,7 +25,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 72% 50%;
+  object-position: 50% 50%;
 }
 
 .home-hero-overlay {
@@ -535,7 +535,7 @@
     min-height: clamp(680px, calc(100svh - var(--header-height)), 760px);
     padding-block: 76px;
   }
-  .home-hero-picture img { object-position: 76% 50%; }
+  .home-hero-picture img { object-position: 50% 50%; }
   .home-hero-overlay {
     background:
       linear-gradient(90deg, rgba(18, 23, 23, .94) 0%, rgba(18, 23, 23, .84) 34%, rgba(18, 23, 23, .52) 57%, rgba(18, 23, 23, .12) 100%),
@@ -560,10 +560,10 @@
     align-items: flex-start;
     padding-block: 48px 58px;
   }
-  .home-hero-picture img { object-position: 59% 50%; }
+  .home-hero-picture img { object-position: 43% 50%; }
   .home-hero-overlay {
     background:
-      linear-gradient(180deg, rgba(18, 23, 23, .08) 0%, rgba(18, 23, 23, .24) 36%, rgba(18, 23, 23, .3) 62%, rgba(18, 23, 23, .02) 82%),
+      linear-gradient(180deg, rgba(18, 23, 23, .58) 0%, rgba(18, 23, 23, .58) 42%, rgba(18, 23, 23, .48) 67%, rgba(18, 23, 23, .12) 100%),
       linear-gradient(90deg, rgba(18, 23, 23, .16), transparent 88%);
   }
   .home-hero .hero-content { width: min(calc(100% - 32px), var(--max)); }
@@ -614,8 +614,31 @@ html[data-scroll-reveals="ready"] [data-scroll-reveal]:focus-within {
   transform: none;
 }
 
+html[data-service-reveals="ready"] [data-service-image-reveal="waiting"] {
+  clip-path: inset(0 100% 0 0);
+}
+
+html[data-service-reveals="ready"] [data-service-copy-reveal="waiting"] {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+html[data-service-reveals="ready"] .service-card-modern:focus-within [data-service-image-reveal],
+html[data-service-reveals="ready"] .service-card-modern:focus-within [data-service-copy-reveal] {
+  clip-path: inset(0);
+  opacity: 1;
+  transform: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html[data-scroll-reveals="ready"] [data-scroll-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  html[data-service-reveals="ready"] [data-service-image-reveal],
+  html[data-service-reveals="ready"] [data-service-copy-reveal] {
+    clip-path: inset(0) !important;
     opacity: 1 !important;
     transform: none !important;
   }

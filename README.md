@@ -13,8 +13,8 @@ Resend.
   npm scripts use Node.js.
 
 The dependency versions are pinned in `package.json` and `package-lock.json`.
-The Agency Agents source commits and project skills are recorded in
-`config/agency-agent-skill-map.json` and `skills-lock.json`.
+The site's stable ID is recorded in `config/site.json`. Reusable developer tools
+and their source records live in the optional sibling `ruflo` repository.
 
 ## Install and run
 
@@ -58,17 +58,18 @@ and verifies the pinned SHA-256 before running it against `package-lock.json`.
 
 ## Agents, skills, and MCP tools
 
-Use the existing Codex profiles in `.codex/agents/` and preserved Agency Agents
-instructions in `.codex/agency-agents/source/`. `config/agency-agent-skill-map.json`
-maps profiles to the skills under `.agents/skills/`; `skills-lock.json` records
-the installed external skill sources. `shadcn` is optional guidance and does
-not make shadcn/ui mandatory for this or future sites.
+NEUSTAND keeps its own frontend guidance in `.agents/skills/frontend-dev/` and
+site-specific decisions in `config/site-design-context.json`. The optional
+sibling `ruflo` repository provides reusable agent profiles and technical
+skills through local Codex links. The website installs, builds, tests, and
+runs without those links or the sibling folder.
 
 Restore project MCP settings from
 [`config/codex-mcp.example.toml`](config/codex-mcp.example.toml) as described in
 [docs/MCP_SETUP.md](docs/MCP_SETUP.md). Do not overwrite an existing local
-`.codex/config.toml`; merge the entries you need. Codex's user-level Ruflo
-connection is managed separately from this project template.
+`.codex/config.toml`; merge the entries you need. For a fresh Codex session
+with this site's private Ruflo memory, use `..\ruflo\scripts\open-site.ps1
+-Slug neustand` when the sibling developer workspace is installed.
 
 ## Project references
 

@@ -25,9 +25,5 @@ args = ["/c", "npx", "-y", "mcp-remote@0.14.3", "https://gitmcp.io/saadeghi/dais
 command = "cmd"
 args = ["/c", "npx", "--yes", "shadcn@4.21.4", "mcp"]
 
-[mcp_servers.originkit]
-url = "https://mcp.originkit.dev/mcp"
-bearer_token_env_var = "ORIGINKIT_API_KEY"
-
-# Ruflo is already configured at the Codex user level in this environment.
-# Do not add a second project-local server with the same name.
+# Ruflo is optional for this site. The sibling Ruflo workspace launcher
+# selects the site's private memory store and the installed Ruflo 3.54.1 CLI.
